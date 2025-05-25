@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>レストラン検索</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ヒーローセクション -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>美味しいレストランを見つけよう</h1>
+      <p>現在地から近くの人気店を検索できます</p>
+    </div>
+  </header>
+
+  <!-- 検索バー -->
+  <section class="search-bar">
+    <form id="search-form">
+      <label for="range">検索範囲:</label>
+      <select id="range">
+        <option value="1">約300m</option>
+        <option value="2">約500m</option>
+        <option value="3" selected>約1000m</option>
+        <option value="4">約2000m</option>
+        <option value="5">約3000m</option>
+      </select>
+
+      <label for="keyword">キーワード:</label>
+      <input type="text" id="keyword" placeholder="例: ラーメン, カフェ">
+
+      <button type="submit">検索</button>
+    </form>
+  </section>
+
+  <!-- 検索結果表示エリア -->
+  <main>
+    <section id="results" class="card-section"></section>
+    <div id="pagination"></div>
+  </main>
+
+  <!-- スクリプト読み込み -->
+  <script src="app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD59xSVs1pTA7Ge5SurpNiDdOSvTqy2ANQ" async defer></script>
+
+  <footer style="text-align: center; font-size: 0.8rem; margin-top: 40px;">
+  背景画像: <a href="https://jp.freepik.com/free-vector/vector-dinner-set-collection_2805945.htm" target="_blank" rel="noopener noreferrer">Freepik</a> より
+</footer>
+</body>
+</html>
